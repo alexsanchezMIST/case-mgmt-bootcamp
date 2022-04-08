@@ -1,0 +1,106 @@
+/*
+ Theme Name: Sanders & Associates
+ Theme URI: https://example.com/theme
+ Author: MIST Digital
+ Author URI: https://mist.rocks
+ Description: Description
+ Version: 0.1
+ License: GNU General Public License
+ License URI: https://www.gnu.org/licenses/gpl.html
+ Tags: 
+ Text Domain: 
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/public-sans.css";
+
+body {
+  font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
+  border: 0.875vw solid #23ab69;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter;
+}
+
+.prose h2 {
+  @apply font-medium tracking-tight;
+}
+
+h3 {
+  @apply text-lg md:text-xl lg:text-2xl font-medium;
+}
+
+article {
+  @apply prose prose-sm md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl;
+}
+
+.blue {
+  @apply font-bold text-cerulean;
+}
+
+.button {
+  @apply flex justify-center items-center h-14 lg:h-16 w-full max-w-md bg-jungle rounded-md shadow-lg text-base md:text-lg lg:text-xl text-white font-semibold transition-all hover:opacity-80 hover:-translate-y-1;
+}
+
+.container {
+  @apply mx-auto;
+}
+
+.prose ul {
+  list-style: none;
+}
+
+.prose li {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.prose li::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("/wp-content/uploads/2022/02/sanders-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.mail-link,
+.phone-link {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.mail-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 100%;
+  background-image: url("/wp-content/uploads/2022/02/sanders-envelope.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.phone-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 100%;
+  background-image: url("/wp-content/uploads/2022/02/sanders-telephone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
